@@ -14,9 +14,9 @@ import Foundation
 @available(iOS 15.0, macOS 12.0, *)
 public class NetworkMnager{
     
-    let urlSession : URLSession
+    public let urlSession : URLSession
     
-    init(urlSession: URLSession = URLSession.shared) {
+    public init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
 }
