@@ -21,7 +21,7 @@ class NetworkMnager{
     }
 }
 
-@available(macOS 12.0, *)
+@available(macOS 15.0, *)
 extension NetworkMnager: Network{
     
     
