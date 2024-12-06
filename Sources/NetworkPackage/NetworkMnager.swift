@@ -11,7 +11,7 @@ protocol Network{
     //creating a generic function
     func getDataFromUrl<T: Decodable>(url:String ,modelType:T.Type) async throws -> T
 }
-
+@available(macOS 15.0, *)
 class NetworkMnager{
     
     let urlSession : URLSession
