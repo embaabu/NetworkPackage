@@ -7,7 +7,7 @@
 
 import Foundation
 //using enum to handle the diffrent error cases that might happen during the api call
-enum NetworkError: Error{
+public enum NetworkError: Error{
     case InvalidURLError
     case dataNotFoundError
     case InvalidStatusCodeResponse
@@ -16,7 +16,7 @@ enum NetworkError: Error{
 }
 
 extension NetworkError: LocalizedError{
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self{
         case .InvalidURLError:
             return "The url on which we are trying to fetch data is invalid"

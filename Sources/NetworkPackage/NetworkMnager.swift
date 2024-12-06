@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol Network{
+ public protocol Network{
     //creating a generic function
-    func getDataFromUrl<T: Decodable>(url:String ,modelType:T.Type) async throws -> T
+     func getDataFromUrl<T: Decodable>(url:String ,modelType:T.Type) async throws -> T
 }
 @available(iOS 15.0, macOS 12.0, *)
-class NetworkMnager{
+public class NetworkMnager{
     
     let urlSession : URLSession
     
@@ -25,7 +25,7 @@ class NetworkMnager{
 extension NetworkMnager: Network{
     
     
-    func getDataFromUrl<T>(url: String, modelType: T.Type) async throws -> T where T : Decodable {
+    public func getDataFromUrl<T>(url: String, modelType: T.Type) async throws -> T where T : Decodable {
         
         guard let urlObject = URL(string: url) else{
             throw NetworkError.InvalidURLError
